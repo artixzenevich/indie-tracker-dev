@@ -1,0 +1,82 @@
+.slider-wrap
+    width: 860px
+    margin-bottom: 40px    
+.slider
+    position: relative
+    min-width: 0
+
+    .slick-arrow
+        opacity: 0
+        transition: .2s ease-in
+        position: absolute
+        top: 40%
+        z-index: 2
+        font-size: 0
+        width: 30px
+        height: 50px
+        border: none
+
+    .slick-prev
+        left: 0
+        background: url('/assets/img/sl-arrow_l.svg') 0 0 / 50% no-repeat
+    .slick-next
+        text-align: right
+        background: url('/assets/img/sl-arrow_r.svg') 0 0 / 50% no-repeat
+        right: -2%
+
+    &:hover
+        .slick-arrow
+            opacity: 1
+
+    .slick-dots
+        list-style: none
+        display: flex
+        justify-content: center
+        column-gap: 5px
+        .slick-active
+            button
+                background-color: #FFB703   
+        button
+            border: none
+            background-color: #0E1221    
+            font-size: 0
+            height: 10px
+            width: 10px
+            border-radius: 50%
+
+                 
+
+.slick-track
+    display: flex
+
+.slick-list 
+    overflow: hidden
+
+.slider-item
+    display: flex
+    margin: 
+        left: 5px
+        right: 5px
+    border-radius: 10px
+    background-color: #0E1221
+    img
+        border-radius: 10px
+
+.slider-content
+    margin:
+        right: 20px
+        left: 20px
+    p
+        height: 180px
+        font-size: 16px
+
+.slider-footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 30px
+
+    .button
+        width: 135px
+        float: right
+

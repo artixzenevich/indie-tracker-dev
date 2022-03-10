@@ -1,0 +1,51 @@
+.form-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+
+.form 
+    box-shadow: 0 0 25px #080707cc   
+    border-radius: 6px
+    color: #0E1221
+    background-color: #0E1221
+    padding: 20px 
+    width: 640px
+    margin-top: 50px
+    legend
+        color: white
+        font-size: 24px
+        font-weight: 600
+    label
+        margin-bottom: 10px
+        color: white
+        display: block
+        
+        &::after
+            content: "*"
+            color: red
+            margin-left: 5px
+
+    textarea
+        width: 620px
+
+    input, textarea
+        border: none
+        border-radius: 6px
+        padding: 10px
+
+    .button
+        float: right
+
+.input-container
+    display: flex
+    justify-content: space-between
+    input
+        width: 290px
+
+.subject-input
+    width: 620px
+    input
+        width: 100%
+
+

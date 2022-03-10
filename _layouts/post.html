@@ -1,0 +1,50 @@
+--- 
+layout: default 
+comments: true
+---
+
+<div class="page-content">
+    <div class="game-title">
+      <h2 class="game-name">{{ page.title | escape }}</h2>
+      <div class="metacritic">
+        <img src="/assets/img/metacritic.svg" width="150" height="40"  alt="metacritick">
+        <span class="userscore">{{ page.metacritic }}</span>
+      </div>
+    </div>
+    {{ content }}
+    <h2>Новые игры на сайте</h2>
+    <ul class="games-list">
+      {% for post in site.posts limit:8 %}
+        <li class="game-card">
+          <a href="{{ post.url }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}" width="200" height="200">
+            <p>{{ post.title }}</p>
+          </a>
+        </li>
+      {% endfor %}
+    </ul> 
+
+    {% if page.comments %}
+    {% endif %}
+
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://indie-tracker.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <script id="dsq-count-scr" src="//indie-tracker.disqus.com/count.js" async></script>
+</div>
