@@ -4,47 +4,67 @@ comments: true
 ---
 
 <div class="page-content">
-    <div class="game-title">
-      <h2 class="game-name">{{ page.title | escape }}</h2>
-      <div class="metacritic">
-        <img src="/assets/img/metacritic.svg" width="150" height="40"  alt="metacritick">
-        <span class="userscore">{{ page.metacritic }}</span>
-      </div>
+  <div class="game-title">
+    <h2 class="game-name">{{ page.title | escape }}</h2>
+    <div class="metacritic">
+      <img src="/assets/img/metacritic.svg" width="150" height="40"  alt="metacritick">
+    <span class="userscore">{{ page.metacritic }}</span>
     </div>
-    {{ content }}
-    <h2>Новые игры на сайте</h2>
-    <ul class="games-list">
-      {% for post in site.posts limit:8 %}
-        <li class="game-card">
-          <a href="{{ post.url }}">
-            <img src="{{ post.image }}" alt="{{ post.title }}" width="200" height="200">
-            <p>{{ post.title }}</p>
-          </a>
-        </li>
-      {% endfor %}
-    </ul> 
+  </div>
+  <div class="game-about">
+    <img class="game-cover" src="{{ page.image }}" alt="disco" width="255" height="255">
+    <ul class="game-info">
+      <li><strong>Дата выхода:</strong> {{ page.release-date }}</li>
+      <li><strong>Жанр:</strong> {{ page.genres }}</li>
+      <li><strong>Разработчик:</strong> {{ page.developer }}</li>
+      <li><strong>Издатель:</strong> {{ page.publisher }}</li>
+      <li><strong>Тип издания:</strong> {{ page.type }}</li>
+      <li><strong>Релиз:</strong> {{ page.release }}</li>
+      <li><strong>Язык интерфейса:</strong> {{ page.language }}</li>
+      <li><strong>Язык озвучки:</strong> {{ page.sound }}</li>
+      <li><strong>Таблетка:</strong> {{ page.therapy }}</li><br>
+      <li><strong>Системные требования:</strong></li>
+      <li><strong>ОС:</strong> {{ page.os }}</li>
+      <li><strong>Процессор:</strong> {{ page.cpu }}</li>
+      <li><strong>Оперативная память:</strong> {{ page.ram }}</li>
+      <li><strong>Видеокарта:</strong> {{ page.gpu }}</li>
+      <li><strong>Место на диске:</strong> {{ page.space }}</li>
+    </ul>
+  </div>
+  {% include buttons.html %}
+  <h4>Описание</h4>
+  <p>{{ content }}</p>
+  <div class="video-trailer">
+    <iframe width="760" height="415" src="{{ page.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="game-gallery">
+    <a href="{{ page.img1 }}" data-fancybox="gallery" data-caption="{{page.title}}">
+      <img src="{{ page.img1 }}" alt="{{page.title}}" width="100%">
+    </a>
+    <a href="{{ page.img2 }}" data-fancybox="gallery" data-caption="{{page.title}}">
+      <img src="{{ page.img2 }}" alt="{{page.title}}" width="100%">
+    </a>
+    <a href="{{ page.img3 }}" data-fancybox="gallery" data-caption="{{page.title}}">
+      <img src="{{ page.img3 }}" alt="{{page.title}}" width="100%">
+    </a>
+    <a href="{{ page.img4 }}" data-fancybox="gallery" data-caption="{{page.title}}">
+      <img src="{{ page.img4 }}" alt="{{page.title}}" width="100%">
+    </a>
+  </div>
+  {% include buttons.html %}
+  {% include new.html %}
+  {% if page.comments %}
+  {% endif %}
 
-    {% if page.comments %}
-    {% endif %}
-
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://indie-tracker.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <script id="dsq-count-scr" src="//indie-tracker.disqus.com/count.js" async></script>
+  <div id="disqus_thread"></div>
+  <script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://indie-tracker.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <script id="dsq-count-scr" src="//indie-tracker.disqus.com/count.js" async></script>
 </div>

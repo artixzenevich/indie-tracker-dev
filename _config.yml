@@ -10,6 +10,41 @@ plugins:
   - jekyll-feed
   - jekyll-paginate-v2
 
+vk: https://vk.com/indie_games_tracker
+telegram: https://t.me/indie_tracker
+
+# Дефолтные метаданные для постов в админке
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: post
+      categories: ""
+      image: "/covers/"
+      release-date: ""
+      genres: ""
+      developer: ""
+      publisher: ""
+      type: "Лицензия"
+      release: GOG
+      language: русский, английский
+      sound: отсутствует
+      therapy: Не требуется (DRM-free)
+      os: ""
+      cpu: ""
+      ram: ""
+      gpu: ""
+      space: ""
+      download: "/downloads/file.torrent"
+      steam: ""
+      youtube: ""
+      img1: ""
+      img2: ""
+      img3: ""
+      img4: ""
+      description: ""
+      metacritic: ""
 
 pagination:
   enabled: true

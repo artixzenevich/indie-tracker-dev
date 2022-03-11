@@ -1,0 +1,21 @@
+<h2>Новые игры на сайте</h2>
+<div class="slider-wrap">
+  <div class="slider">
+    {% for post in site.posts limit:4 %}
+    <div class="slider-item">
+      <img src="{{ post.image }}" width="350" height="350" alt="{{ post.title }}">
+      <div class="slider-content">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description }}</p>
+        <div class="slider-footer">
+          <div class="metacritic">
+            <img src="/assets/img/metacritic.svg" width="150" height="40"  alt="metacritick">
+            <span class="userscore">{{ post.metacritic }}</span>
+          </div>
+          <a class="button" href="{{ post.url }}">Скачать</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
