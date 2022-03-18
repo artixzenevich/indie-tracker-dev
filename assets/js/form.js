@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const formData = new FormData(this);
             form.reset();
-            modal.classList.add('active-modal');
+            modal.classList.add('modal__message--active');
             ajaxSend(formData);
         });
     });

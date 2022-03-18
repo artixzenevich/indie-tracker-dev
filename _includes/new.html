@@ -1,10 +1,10 @@
 <h2>Новые игры на сайте</h2>
-<ul class="games-list">
+<ul class="cards">
   {% for post in site.posts limit:8 %}
-    <li class="game-card">
-      <a href="{{ post.url }}">
-        <img src="{{ post.image }}" alt="{{ post.title }}" width="200" height="200">
-        <p>{{ post.title }}</p>
+    <li class="card">
+      <a class="card__link" href="{{ post.url }}">
+        <img class="card__image" src="{{ post.image }}" alt="{{ post.title }}" width="200" height="200">
+        <h3 class="card__title">{{ post.title }}</h3>
       </a>
     </li>
   {% endfor %}

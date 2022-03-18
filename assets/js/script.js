@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const meta = document.querySelectorAll('.metascore');
+    const meta = document.querySelectorAll('.metacritic__metascore');
     const scrollup = document.querySelector('.scrollup');
 
     metascoreColors();

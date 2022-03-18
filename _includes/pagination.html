@@ -1,22 +1,22 @@
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
     {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Назад</a>
+    <li class="pager__previous">
+        <a class="pager__link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Назад</a>
     </li>
     {% endif %}
 
     {% if paginator.page_trail %}
     {% for trail in paginator.page_trail %}
-      <li>
-          <a {% if page.url == trail.path %}class="selected"{% endif %} href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+      <li class="pager__number">
+          <a {% if page.url == trail.path %}class="pager__link--selected"{% endif %} href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
       </li>
     {% endfor %}
     {% endif %}
     
     {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Дальше &rarr;</a>
+    <li class="pager__next">
+        <a class="pager__link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Дальше &rarr;</a>
     </li>
     {% endif %}
 </ul>

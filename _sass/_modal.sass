@@ -1,0 +1,30 @@
+@import vars
+
+.modal
+    display: none
+
+    &__message
+        box-shadow: $shadow   
+        border-radius: 6px
+        margin-top: 100px
+        background-color: $dark-color
+        width: 300px
+        padding: 40px
+        span
+            font-weight: 600
+            font-size: 20px
+
+    .button
+        margin-top: 40px
+        
+.modal__message--active 
+    display: flex
+    justify-content: center
+    align-items: start
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: 10
+    background-color: #08070770

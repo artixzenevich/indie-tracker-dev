@@ -1,19 +1,21 @@
+@import vars
+
 .pager
     display: flex
     list-style: none
     li
         a
             transition: .2s ease-in
-            background-color: #0E1221 
+            background-color: $dark-color
             font-size: 18px
             padding: 10px 15px
             text-decoration: none
             font-weight: 600
             color: white
             &:hover
-                background-color: #FFB703
-                color: white    
+                background-color: $accent-color
+                color: $text-color 
             .selected
-                background-color: #FFB703
-                color: white 
+                background-color: $accent-color
+                color: $text-color
    

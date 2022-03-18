@@ -1,18 +1,18 @@
 <h2>Новые игры на сайте</h2>
-<div class="slider-wrap">
+<div class="main-slider">
   <div class="slider">
     {% for post in site.posts limit:4 %}
-    <div class="slider-item">
-      <img src="{{ post.image }}" width="350" height="350" alt="{{ post.title }}">
-      <div class="slider-content">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.description }}</p>
-        <div class="slider-footer">
+    <div class="slide">
+      <img class="slide__image" src="{{ post.image }}" width="350" height="350" alt="{{ post.title }}">
+      <div class="slide__content">
+        <h3 class="slide__header">{{ post.title }}</h3>
+        <p class="slide__text">{{ post.description }}</p>
+        <div class="slide__footer">
           <div class="metacritic">
-            <img src="/assets/img/metacritic.svg" width="150" height="40"  alt="metacritick">
-            <span class="metascore">{{ post.metacritic }}</span>
+            <img class="metacritic__logo" src="/assets/img/metacritic.svg" width="150" height="40"  alt="metacritick">
+            <span class="metacritic__metascore">{{ post.metacritic }}</span>
           </div>
-          <a class="button" href="{{ post.url }}">Скачать</a>
+          <a class="slide__button button" href="{{ post.url }}">Скачать</a>
         </div>
       </div>
     </div>
