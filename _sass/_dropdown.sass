@@ -1,0 +1,25 @@
+@import vars
+@import fonts
+
+.dropdown
+    position: relative
+    &__list
+        width: 200px
+        padding: 0
+        position: absolute
+        list-style: none
+        background: $dark 
+        border-radius: 5px
+        box-shadow: $shadow2
+        z-index: 1
+        display: none
+    
+    &:hover
+        .dropdown__list
+            display: block
+
+    &__item
+        padding: 10px 20px
+
+    &__link
+        font-family: 'Brutal Extra Bold'

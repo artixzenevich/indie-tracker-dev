@@ -1,0 +1,35 @@
+- nav: 'Экшен'
+  category: 'action'
+  
+- nav: 'Аркады'
+  category: 'arcade'
+
+- nav: 'Приключения'
+  category: 'adventure'
+
+- nav: 'РПГ'
+  category: 'rpg'
+
+- nav: 'Выживание'
+  category: 'survival'
+
+- nav: 'Роуглайк'
+  category: 'roguelike'
+
+- nav: 'Метроидвания'
+  category: 'metroid'
+
+- nav: 'Хоррор'
+  category: 'horror'
+
+- nav: 'Платформер'
+  category: 'platformer'
+
+- nav: 'Стратегии'
+  category: 'strategy'
+
+- nav: 'Симуляторы'
+  category: 'simulator'
+
+- nav: 'Квесты'
+  category: 'quest'

@@ -1,16 +1,23 @@
 --- 
 layout: default 
 ---
-<div class="content">
-    <h2>{{ page.title }}</h2>
-    <ul class="cards">
+<div class="container">
+    <h2 class="page__title">{{ page.title }}</h2>
+    <div class="cards">
         {% for post in paginator.posts %}
-        <li class="card">
-            <a class="card__link" href="{{ post.url }}">
-              <img class="card__image" src="{{ post.image }}" alt="{{ post.title }}" width="200" height="200">
-              <h3 class="card__title">{{ post.title }}</h3>
-            </a>
-        </li>
+            <div class="card">
+                <a href="{{ post.url }}" class="card__link">
+                    <img class="card__image" src="{{ post.image }}" alt="{{ post.title }}" width="180" height="225">
+                    <h3 class="card__title">{{ post.title }}</h3>
+                    <ul class="category">
+                      {% for category in post.categories %}
+                        <li class="category__item">
+                          <a class="category__link" href="/{{ category }}/index.html">{{ category }}</a> 
+                        </li>
+                      {% endfor %}
+                    </ul>
+                </a>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 </div>

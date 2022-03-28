@@ -4,6 +4,23 @@
             <a class="footer__logo logo" href="/">indie-tracker</a>
             {% include social.html %}
         </div>
+        <hr>
+        <div class="nav-footer">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Все игры</a></li>
+                <li><a href="">Обратная связь</a></li>
+                <li><a href="">Правообладателям</a></li>
+            </ul>
+            <ul>
+                {% for nav in site.data.navigation %}
+                    <li><a href="/{{nav.category}}/index.html">{{ nav.nav }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <p>Администрация не несет ответственности за предоставленные на сайте материалы.
+            Весь архив предоставлен только в ознакомительных целях.
+            Любой торрент файл будет удален по требованию правообладателя.</p>
         <p class="copyright">Copyright © 2022</p>
     </div>
 </footer>

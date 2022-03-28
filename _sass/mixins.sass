@@ -1,3 +1,5 @@
+@import vars
+
 @mixin flex-center 
     display: flex
     justify-content: center
@@ -6,4 +8,23 @@
 @mixin flex-between
     display: flex
     justify-content: space-between
+
+@mixin links
+    text-decoration: none
+    font-family: 'Brutal Medium'
+    color: $text-color
+    opacity: 70%
+    font-size: 14px
+    letter-spacing: 2px 
+    transition: .3s ease 
+
+@mixin nav-links
+    text-decoration: none
+    font-family: 'Brutal Extra Bold'
+    color: $text-color
+    opacity: 70%
+    font-size: 14px
+    letter-spacing: 2px 
+    transition: .3s ease 
+    
         

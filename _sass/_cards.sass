@@ -1,33 +1,47 @@
-.cards
-    display: flex
-    flex-wrap: wrap
-    list-style: none
-    padding-left: 0
-    margin: 
-        top: 20px
-        bottom: 20px
-    padding-top: 20px
+@import vars
 
+.cards
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    margin-top: 35px
 .card
-    cursor: pointer
-    text-align: center
-    min-height: 240px
-    max-height: 245px
-    max-width: 200px
-    transition: .5s ease
-    margin: 
-        right: 15px
-        bottom: 30px
+    margin-bottom: 30px
     &__link
         text-decoration: none
-        font-weight: 600
     &__image
+        opacity: 90%
         border-radius: 10px
         transition: .2s ease
     &__title
-        color: #dddddd
-        max-width: 200px 
+        font-family: 'Brutal Bold'
+        transition: .2s ease
+        opacity: 85%
+        font-size: 16px
+        color: $text-color
 
     &:hover
+        .card__image
+            opacity: 100%
+        .card__title
+            opacity: 100%
         img
             box-shadow: 0 0 25px #080707cc 
+
+.category
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    padding: 0
+    &__item        
+        background-color: $category-color
+        border-radius: 5px
+        padding: 3px 5px
+        margin:
+            right: 5px
+            bottom: 5px
+    &__link
+        font-family: 'Brutal'
+        letter-spacing: .3px
+        font-size: 13px
+        text-decoration: none
+        color: $text-color 

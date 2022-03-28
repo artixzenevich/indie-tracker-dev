@@ -1,15 +1,10 @@
 {% include head.html %}
 {% include header.html %}
 
+{{ content }}
+{% include pagination.html %}
+{% include scrollup.html %}
 
-    <div class="container">
-        <div class="main-wrap">
-            {{ content }}
-            {% include sidebar.html %}
-        </div>
-        {% include pagination.html %}
-        {% include scrollup.html %}
-    </div>
 
 {% include footer.html %}
 

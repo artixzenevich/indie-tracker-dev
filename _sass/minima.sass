@@ -6,7 +6,7 @@
 @import _search.sass
 @import _cards.sass
 @import _buttons
-@import _sidebar
+@import _dropdown
 @import _slider
 @import _pagination
 @import _post
@@ -19,17 +19,10 @@ body
     color: white
     position: relative
 
-header
-    padding: 
-        top: 20px
-        bottom: 10px    
-
-.main-page-link
-    text-align: center
-    a
-        font-size: 18px
-        font-weight: 600
-        color: #dddddd
+hr
+    background-color: $text-color
+    border-color: $text-color
+    opacity: 70%    
 
 .container
     width: 1140px
@@ -40,33 +33,77 @@ header
         left: 15px
         right: 15px
 
+.page
+    &__title
+        color: $text-color
+        font-family: 'Brutal Extra Bold' 
+        letter-spacing: 2px
+        margin: 40px 0   
+// HEADER AND NAV 
+.logo
+    font-family: 'Forward'
+    font-size: 16px
+    color: $text-color
+    text-decoration: none 
+
+header
+    background-color: $dark
+    height: 65px
+
 .header
     @include flex-between
     align-items: center
 
-.logo
-    font-family: 'Forward'
-    font-size: 24px
-    color: $text-color
-    text-decoration: none
+    &__nav
+        @include flex-between
+
+    &__menu
+        list-style: none
+        display: flex
+        align-items: center
+        gap: 60px
+
+        a
+            @include links
+            &:hover
+                opacity: 100%
+
+.nav-header
+    background: $dark-grey
+    box-shadow: $shadow
+    &__links
+        list-style: none
+        display: flex
+        column-gap: 95px
+        padding: 30px 0
+        margin: 0
+        a
+            @include nav-links
+            &:hover
+                opacity: 100%
+
+    &__wrapper
+        @include flex-between
+        align-items: center
+
+    &--sticky
+        position: fixed
+        top: 0
+        width: 100%
+        z-index: 30
 
 .main-wrap
     @include flex-between
     
-.content    
-    border-right: 1px solid #575656
-    width: 900px
-
 // Social Buttons
 .social
     list-style: none
-    width: 100px
     @include flex-between
-    
-.social-header
-    padding:
-        left: 160px
-        top: 10px
+    align-items: center
+    margin-top: 20px    
+
+    &__logo
+        margin-left: 65px
 // END Social Buttons    
 
 // Metacritic Style
@@ -84,8 +121,8 @@ header
 
 footer
     margin-top: 40px
-    background-color: $dark-color
-    color: white
+    background-color: $dark-grey
+    color: $text-color
 
     svg
         color: white
@@ -94,8 +131,8 @@ footer
     @include flex-between
     align-items: center
 
-    .social
-        width: 120px
+.nav-footer
+    display: flex
 
 .copyright
     text-align: right
