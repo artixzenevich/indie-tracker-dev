@@ -3,21 +3,26 @@
 @import vars
 @import mixins
 @import fonts
-@import _search.sass
-@import _cards.sass
+@import _search
+@import _cards
 @import _buttons
 @import _dropdown
 @import _slider
 @import _pagination
+@import _hero-post
 @import _post
+@import _post-content
+@import _new-card
 @import _form
 @import _scrollup
-@import _modal.sass
+@import _modal
 
 body 
-    background-color: $main-color
+    background-color: $dark-grey
     color: white
     position: relative
+    font-family: 'Brutal'
+    color: $text-color
 
 hr
     background-color: $text-color
@@ -110,18 +115,22 @@ header
 .metacritic
     @include flex-between
     align-items: center
+    width: 220px
 
     &__metascore
         background-color: #66CC33
-        padding: 5px
+        padding: 10px
         border-radius: 6px 
         margin-left: 20px
-        font-size: 24px
+        font-size: 20px
 // END Metacritic Style
+
+.comments__header
+    @include post-header
 
 footer
     margin-top: 40px
-    background-color: $dark-grey
+    background-color: $main-color
     color: $text-color
 
     svg

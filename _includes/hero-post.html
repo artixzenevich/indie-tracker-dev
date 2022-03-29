@@ -1,0 +1,32 @@
+<div class="hero-post" style="background-image: linear-gradient(rgba(30, 30, 30, 0.4), rgb(34, 34, 34, 1) 95%), url('{{ page.image_hero }}');">
+    <div class="container">
+      <div class="hero-post__flex">
+        <div class="hero-post__content">
+          <h1 class="hero-post__title">{{ page.title | escape }}</h1>
+          <span class="hero-post__genre"><strong>Жанры:</strong> {{ page.genres }}</span>
+          <p class="hero-post__description">{{ page.description }}</p>
+          {% include buttons.html %}
+        </div>
+        <div class="hero-post-system">
+          <h2 class="hero-post-system__header">Системные требования</h2>
+          <ul class="hero-post-system__list">
+            <li class="hero-post-system__item">
+              <strong>ОС:</strong> {{ page.os }}
+            </li>
+            <li class="hero-post-system__item">
+              <strong>Процессор:</strong> {{ page.cpu }}
+            </li>
+            <li class="hero--post-system__item">
+              <strong>Оперативная память:</strong> {{ page.ram }}
+            </li>
+            <li class="hero-post-system__item">
+              <strong>Видеокарта</strong> {{ page.gpu }}
+            </li>
+            <li class="hero-post-system__item">
+              <strong>Место на диске</strong> {{ page.space }}
+            </li>
+          </ul>
+        </div>
+      </div>    
+    </div>
+</div>

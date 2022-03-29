@@ -11,6 +11,8 @@ $(document).ready(function(){
         arrows: false,
         asNavFor: '.slider',
         centerMode: true,
-        focusOnSelect: true
+        focusOnSelect: true,
+        variableWidth: true
     });
+
 })

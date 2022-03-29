@@ -1,0 +1,23 @@
+@import vars
+@import mixins
+
+.new-card    
+    &__header
+        @include post-header
+    
+    &__list
+        list-style: none
+        padding: 0
+
+    &__image
+        border-radius: 5px
+
+    &__link
+        text-decoration: none
+
+    &__title
+        color: $text-color
+        font-family: 'Brutal Extra Bold'
+        font-size: 16px
+        letter-spacing: 1px
+        margin-bottom: 30px

@@ -1,0 +1,13 @@
+<div class="new-card">
+  <h2 class="new-card__header">Новые игры на сайте</h2>
+  <ul class="new-card__list">
+    {% for post in site.posts limit:8 %}
+      <li class="new-card__item">
+        <a class="new-card__link" href="{{ post.url }}">
+          <img class="new-card__image" src="{{ post.image_header }}" alt="{{ post.title }}" width="330" height="130">
+          <h3 class="new-card__title">{{ post.title }}</h3>
+        </a>
+      </li>
+    {% endfor %}
+  </ul> 
+</div>
