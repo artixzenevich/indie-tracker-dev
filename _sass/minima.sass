@@ -58,6 +58,7 @@ hr
     transition: .2s ease
     &:hover
         box-shadow: 0 0 7px $button-hover
+
 .button-group
     margin: 3rem 0
     &__button
@@ -99,6 +100,15 @@ hr
     &__logo
         margin-left: 65px
         @include hover-link
+
+.badge
+    text-decoration: none
+    padding: 5px 7px
+    background-color: $category-color
+    color: $text-color
+    font-size: .8rem
+    border-radius: 5px
+    margin-right: 1rem
 
 .metacritic
     @include flex-between

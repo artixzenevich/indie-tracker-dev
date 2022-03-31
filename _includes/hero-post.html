@@ -3,12 +3,9 @@
       <div class="hero-post__flex">
         <div class="hero-post__content">
           <h1 class="hero-post__title">{{ page.title | escape }}</h1>
-          <span class="hero-post__genre"><strong>Жанры:</strong> 
-          
-            {% for category in page.categories %}
-                <a class="category__link" href="/{{ category }}/index.html">{{ category }}</a> 
-            {% endfor %}
-          </span>
+          {% for category in page.categories %}
+            <a class="badge" href="/{{ category }}/index.html">{{ category }}</a> 
+          {% endfor %}
           <p class="hero-post__description">{{ page.description }}</p>
           <div class="button-group">
             <a class="button-group__button button" href="{{ page.download }}" download>Скачать</a>
