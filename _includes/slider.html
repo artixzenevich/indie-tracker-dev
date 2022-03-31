@@ -7,7 +7,7 @@
           <h3 class="slide__header">{{ post.title }}</h3>
           <p class="slide__text">{{ post.description }}</p>
           <div class="slide__footer">
-            <a class="slide__button button" href="{{ post.url }}">Скачать</a>
+            <a class="button" href="{{ post.url }}">Скачать</a>
             <div class="metacritic">
               <img class="metacritic__logo" src="/assets/img/metacritic.svg" width="150" height="40"  alt="metacritick">
               <span class="metacritic__metascore">{{ post.metacritic }}</span>
@@ -21,7 +21,7 @@
   <div class="slider-nav">
     {% for post in site.posts limit:8 %}
       <div class="slider-nav__slide">
-        <img class="slide__image" width="330" height="130" src="{{ post.image_header }}" alt="{{ post.title }}">
+        <img class="slide__image" width="250" height="130" src="{{ post.image_header }}" alt="{{ post.title }}">
       </div>
     {% endfor %}
   </div>

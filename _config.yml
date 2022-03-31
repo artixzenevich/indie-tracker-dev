@@ -40,7 +40,8 @@ defaults:
       space: ""
       download: "/downloads/file.torrent"
       steam: ""
-      youtube: ""
+      video: ""
+      video_poster: ""
       img1: ""
       img2: ""
       img3: ""
@@ -52,9 +53,9 @@ defaults:
 
 pagination:
   enabled: true
-  per_page: 36
+  per_page: 10
   permalink: '/page/:num/'
-  title: 'страница - :num'
+  title:  'страница - :num'
   limit: 0
   sort_field: 'date'
   sort_reverse: true

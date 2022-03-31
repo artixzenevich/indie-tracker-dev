@@ -1,0 +1,42 @@
+
+footer
+    margin-top: 40px
+    background-color: $main-color
+    color: $text-color
+
+    svg
+        color: white
+.footer
+    &__top
+        @include flex-between
+        align-items: center
+
+    &__bottom
+        @include flex-between
+        align-items: center
+        padding: 20px 0
+        opacity: 70%
+        p
+            min-width: 300px
+            max-width: 600px
+            font-size: 14px
+
+.nav-footer
+    @include flex-between
+
+    &__list
+        list-style: none
+        padding: 0
+        
+    &__item
+        padding: 8px 0
+
+    &__link
+        font-family: 'Brutal Extra Bold'
+        color: $text-color
+        text-decoration: none
+        @include hover-link
+
+
+.copyright
+   font-size: 14px

@@ -9,13 +9,23 @@
         list-style: none
         padding: 0
 
+    &__item
+        &:hover
+            .new-card__title
+                opacity: 100%
+            .new-card__image
+                 box-shadow: $shadow2 
+
     &__image
+        transition: .2s ease
         border-radius: 5px
 
     &__link
         text-decoration: none
 
     &__title
+        transition: .2s ease
+        opacity: 70%
         color: $text-color
         font-family: 'Brutal Extra Bold'
         font-size: 16px

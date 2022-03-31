@@ -5,21 +5,6 @@
 
 .slider
     min-width: 0
-    .slick-dots
-        list-style: none
-        display: flex
-        justify-content: center
-        column-gap: 5px
-        .slick-active
-            button
-                background-color: $accent-color  
-        button
-            border: none
-            background-color: $shadow  
-            font-size: 0
-            height: 10px
-            width: 10px
-            border-radius: 50%
 
 .slick-track
     display: flex
@@ -28,6 +13,7 @@
     overflow: hidden
 
 .slide
+    color: $text-color
     background-position: top
     background-repeat: no-repeat
     background-size: 100%
@@ -47,18 +33,15 @@
         letter-spacing: 1px
     &__text
         font-family: 'Brutal'
-        font-size: 16px
+        font-size: 1rem
         letter-spacing: 1px
         margin-bottom: 25px
         line-height: 2
         height: 100px
     &__footer
         @include flex-between
-        margin-bottom: 45px        
-    &__button
-        background-color: $button-color
-        color: $text-color
-        width: 135px
+        align-items: center
+        margin-bottom: 45px      
         
 .slider-nav
     max-width: 100hw
@@ -67,7 +50,7 @@
         height: 150px
 
     .slick-slide
-        width: 360px
+        width: 265px
 
 .slide
     &__image

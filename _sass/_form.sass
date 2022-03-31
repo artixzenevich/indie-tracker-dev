@@ -1,24 +1,22 @@
-.form-wrap
+.flex
     display: flex
     justify-content: center
     align-items: center
     position: relative
 
 .form 
-    box-shadow: 0 0 25px #080707cc   
+    box-shadow: $shadow 
     border-radius: 6px
-    color: #0E1221
-    background-color: #0E1221
+    color: #B5B5B0
+    background-color: $dark
     padding: 20px 
     width: 640px
     margin-top: 50px
     legend
-        color: white
         font-size: 24px
         font-weight: 600
     label
         margin-bottom: 10px
-        color: white
         display: block
         
         &::after
@@ -30,10 +28,20 @@
         width: 620px
 
     input, textarea
+        background-color: $dark-grey
+        color: $text-color 
         border: none
-        border-radius: 6px
+        border-radius: 20px
         padding: 10px
-
+        box-shadow: $shadow
+        transition: .2s ease
+        &:focus
+            outline: 0
+            box-shadow: inset 0 0 10px $dark
+        &:active
+            outline: 0
+            box-shadow: inset 0 0 10px $dark
+            
     .button
         float: right
 

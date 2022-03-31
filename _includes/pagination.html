@@ -1,23 +1,33 @@
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="pager__previous">
-        <a class="pager__link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Назад</a>
-    </li>
-    {% endif %}
-
-    {% if paginator.page_trail %}
-    {% for trail in paginator.page_trail %}
-      <li class="pager__number">
-          <a {% if page.url == trail.path %}class="pager__link--selected"{% endif %} href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
-      </li>
-    {% endfor %}
-    {% endif %}
+<div class="flex">
+    {% if paginator.total_pages > 1 %}
+    <ul class="pager">
+        {% if paginator.previous_page %}
+        <li class="pager__previous">
+            <a class="pager__link-previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 13L1 7L7 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>    
+            </a>
+        </li>
+        {% endif %}
     
-    {% if paginator.next_page %}
-    <li class="pager__next">
-        <a class="pager__link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Дальше &rarr;</a>
-    </li>
+        {% if paginator.page_trail %}
+        {% for trail in paginator.page_trail %}
+          <li class="pager__number">
+              <a {% if page.url == trail.path %}class="pager__link--selected"{% endif %} href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+          </li>
+        {% endfor %}
+        {% endif %}
+        
+        {% if paginator.next_page %}
+        <li class="pager__next">
+            <a class="pager__link-next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13L7 7L1 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
     {% endif %}
-</ul>
-{% endif %}
+</div>

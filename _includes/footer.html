@@ -1,27 +1,39 @@
 <footer>
     <div class="container">
-        <div class="footer">
-            <a class="footer__logo logo" href="/">indie-tracker</a>
+        <div class="footer__top">
+            <a class="logo" href="/">indie-tracker</a>
             {% include social.html %}
         </div>
         <hr>
         <div class="nav-footer">
-            <ul>
-                <li><a href="">Главная</a></li>
-                <li><a href="">Все игры</a></li>
-                <li><a href="">Обратная связь</a></li>
-                <li><a href="">Правообладателям</a></li>
+            <ul class="nav-footer__list">
+                <li class="nav-footer__item">
+                    <a class="nav-footer__link"  href="/">Главная</a>
+                </li>
+                <li class="nav-footer__item">
+                    <a class="nav-footer__link" href="/all/index.html">Все игры</a>
+                </li>
+                <li class="nav-footer__item">
+                    <a class="nav-footer__link" href="/feedback.html">Обратная связь</a>
+                </li>
+                <li class="nav-footer__item">
+                    <a class="nav-footer__link" href="/right-holders.html">Правообладателям</a>
+                </li>
             </ul>
-            <ul>
+            <ul class="nav-footer__list">
                 {% for nav in site.data.navigation %}
-                    <li><a href="/{{nav.category}}/index.html">{{ nav.nav }}</a></li>
+                    <li class="nav-footer__item">
+                        <a class="nav-footer__link" href="/{{nav.category}}/index.html">{{ nav.nav }}</a>
+                    </li>
                 {% endfor %}
             </ul>
         </div>
-        <p>Администрация не несет ответственности за предоставленные на сайте материалы.
-            Весь архив предоставлен только в ознакомительных целях.
-            Любой торрент файл будет удален по требованию правообладателя.</p>
-        <p class="copyright">Copyright © 2022</p>
+        <div class="footer__bottom">
+            <p>Администрация не несет ответственности за предоставленные на сайте материалы.
+                Весь архив предоставлен только в ознакомительных целях.
+                Любой торрент файл будет удален по требованию правообладателя.</p>
+            <span class="copyright">Copyright © 2022</span>
+        </div>
     </div>
 </footer>
 

@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     metascoreColors();
 
     window.addEventListener('scroll', navbarSticky);
-    window.addEventListener('scroll', trackScroll);
-    scrollup.addEventListener('click', backToTop);
+    window.addEventListener('scroll', trackScroll, {passive: true});
+    scrollup.addEventListener('click', backToTop, {passive: true});
 
     function navbarSticky() {
       if (window.pageYOffset >= sticky) {
@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }  
 
-    // изменение цвета у эелемента metascore
     function metascoreColors() {
         meta.forEach(element => {
             let score = Number(element.innerHTML);

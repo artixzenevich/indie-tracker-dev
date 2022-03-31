@@ -1,0 +1,45 @@
+header
+    background-color: $dark
+    height: 65px
+
+.header
+    @include flex-between
+    align-items: center
+
+    &__nav
+        @include flex-between
+
+    &__menu
+        list-style: none
+        display: flex
+        align-items: center
+        gap: 60px
+
+        a
+            @include links
+            &:hover
+                opacity: 100%
+
+.nav-header
+    background: $dark-grey
+    box-shadow: $shadow
+    &__links
+        list-style: none
+        display: flex
+        column-gap: 95px
+        padding: 30px 0
+        margin: 0
+        a
+            @include hover-link
+            &:hover
+                opacity: 100%
+
+    &__flex
+        @include flex-between
+        align-items: center
+
+    &--sticky
+        position: fixed
+        top: 0
+        width: 100%
+        z-index: 30

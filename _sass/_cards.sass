@@ -2,22 +2,26 @@
 
 .cards
     display: grid
-    grid-template-columns: repeat(6, 1fr)
+    grid-template-columns: repeat(5, 1fr)
     margin-top: 35px
 .card
     margin-bottom: 30px
+    max-width: 240px
+    
     &__link
         text-decoration: none
     &__image
         opacity: 90%
         border-radius: 10px
         transition: .2s ease
+        
     &__title
         font-family: 'Brutal Bold'
         transition: .2s ease
         opacity: 85%
         font-size: 16px
         color: $text-color
+        min-height: 38px
 
     &:hover
         .card__image

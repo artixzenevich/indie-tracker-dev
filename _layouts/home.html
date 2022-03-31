@@ -4,23 +4,16 @@ layout: default
 {% include slider.html %}
 <div class="container">
   <div class="cards">
-    {% for post in site.posts limit:36 %}
+    {% for post in site.posts limit:35 %}
       <div class="card">
         <a class="card__link" href="{{ post.url }}">
-          <img class="card__image" src="{{ post.image }}" alt="{{ post.title }}" width="180" height="225">
+          <img class="card__image" src="{{ post.image }}" alt="{{ post.title }}" width="210" height="285">
           <h3 class="card__title">{{ post.title }}</h3>
-          <ul class="category">
-            {% for category in post.categories %}
-              <li class="category__item">
-                <a class="category__link" href="/{{ category }}/index.html">{{ category }}</a> 
-              </li>
-            {% endfor %}
-          </ul>
         </a>
       </div>
     {% endfor %}
   </div>
-  <div class="main-page__button">
+  <div class="button-group__center">
     <a class="button" href="/all/index.html" >Все игры</a>
   </div>
   

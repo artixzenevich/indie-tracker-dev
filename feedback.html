@@ -4,7 +4,7 @@ title: Обратная связь
 ---
 
 <div class="content">
-    <div class="form-wrap">
+    <div class="flex">
         <form class="form" method="post">
             <legend>Обратная связь</legend>
             <div class="input-container">
@@ -31,11 +31,15 @@ title: Обратная связь
 </div>
 
 <div class="modal">
-    <p class="modal__message">
-        <span>Спасибо за обратную связь:)</span><br>
-        Ваше сообщение отправленно!
-        <a class="button" href="/">На главную</a>
-    </p>
+    <div class="modal__message">
+        <p>
+            Спасибо за обратную связь:)<br>
+            Ваше сообщение отправленно!
+        </p> 
+        <div class="button-group__center">
+            <a class="button" href="/">На главную</a>
+        </div>
+    </div>
 </div>
 
 <script src="/assets/js/form.js"></script>
